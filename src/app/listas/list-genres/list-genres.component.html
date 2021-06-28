@@ -1,7 +1,9 @@
 <section>
   <h1>{{genre.name}}</h1>
-  <p *ngFor="let item of movies">
-    {{item.title}}
-  </p>
+  <div class="rowMovies">
+    <span class="movie" *ngFor="let item of movies">
+      <img [src]="'http://image.tmdb.org/t/p/w300' + item.poster_path">
+    </span>
+  </div>
 </section>
 
