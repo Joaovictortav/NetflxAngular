@@ -1,0 +1,10 @@
+<div>
+  <h2>{{pathObject?.name}}</h2>
+  <div class="movieRowArea">
+    <div class="movieRow">
+      <div class="movieItem" *ngFor="let item of movies">
+        <img [src]="'http://image.tmdb.org/t/p/w300'+item.poster_path">
+      </div>
+    </div>
+  </div>
+</div>

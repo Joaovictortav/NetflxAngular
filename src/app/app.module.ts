@@ -4,23 +4,18 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './nav/navbar/navbar.component';
-import { DestaqueComponent } from './destaque/destaque/destaque.component';
-import { ListasComponent } from './listas/listas.component';
-import { ListGenresComponent } from './listas/list-genres/list-genres.component';
+import { PaginaModule } from './pagina/pagina.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    DestaqueComponent,
-    ListasComponent,
-    ListGenresComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    PaginaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

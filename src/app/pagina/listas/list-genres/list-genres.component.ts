@@ -1,4 +1,4 @@
-import { ServiceService } from './../../crud/service.service';
+import { ServiceService } from './../../../crud/service.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -26,7 +26,6 @@ export class ListGenresComponent implements OnInit {
       console.log(data);
       this.movies = data.results;
     });
-}
-
+  }
 
 }

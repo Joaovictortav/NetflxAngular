@@ -23,6 +23,10 @@ export class ServiceService {
     return this.http.get(`${this.API_BASE}genre/movie/list`, {params: params})
   }
 
+  getOthersMovies(path: string): Observable<any> {
+    return this.http.get(`${this.API_BASE}${path}${this.API_KEY}`);
+  }
+
   getListMovieByGenres(id: number): Observable<any> {
     return this.http.get(`${this.getListMoviesByGeners}${id}`);
   }
