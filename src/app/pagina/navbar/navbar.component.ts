@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+
+  verticalOffset: number = 0;
+
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event: any){
+    console.log($event);
+    this.verticalOffset = window.pageYOffset;
+  }
+
+  constructor(){}
 
   ngOnInit(): void {
   }

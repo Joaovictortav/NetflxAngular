@@ -30,4 +30,8 @@ export class ServiceService {
   getListMovieByGenres(id: number): Observable<any> {
     return this.http.get(`${this.getListMoviesByGeners}${id}`);
   }
+
+  getDataMovieById (id: string, tipo: string) {
+    return this.http.get(`https://api.themoviedb.org/3/${tipo}/${id}?api_key=${this.API_KEY}&language=pt-BR`)
+  }
 }

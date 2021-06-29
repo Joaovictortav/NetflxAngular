@@ -1,1 +1,24 @@
-<p>destaque works!</p>
+<section class="featured"
+[style.background-image]="'url(http://image.tmdb.org/t/p/original' + dataMovie.backdrop_path + ')'"
+>
+<div class="featured-efeito-vertical">
+  <div class="featured-efeito-horizontal">
+    <div class="featured-name">{{dataMovie.name}}</div>
+    <div class="featured-info">
+      <div class="featured-points">{{dataMovie.vote_average}} pontos</div>
+      <div class="featured-date">{{firstDate.getFullYear()}}</div>
+      <div class="featured-seasons">{{dataMovie.number_of_seasons}} {{dataMovie.number_of_seasons > 1 ? 'temporadas' : 'temporada'}}</div>
+    </div>
+    <div class="featured-description">
+      {{dataMovie.overview}}
+    </div>
+    <div class="featured-butttons">
+      <a class="buttunPlay" href="#">▶ Assistir</a>
+      <a class="buttunMyList" href="#">+ Minha Lista</a>
+    </div>
+    <div class="featured-genres">
+      <strong>Gêneros: </strong> <span>{{genres}}</span>
+    </div>
+  </div>
+</div>
+</section><div>
