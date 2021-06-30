@@ -13,6 +13,9 @@ export class ListGenericComponent implements OnInit {
   @Input() pathObject: any = {};
   movies: any[] = [];
 
+  sizeList: number = 0;
+  windowWidth: number = window.innerWidth;
+
   ngOnInit() {
   }
 
@@ -23,6 +26,20 @@ export class ListGenericComponent implements OnInit {
           this.movies = data.results;
         }
       );
+  }
+
+  moverLeft() {
+    if ((this.movies.length * 150) - this.windowWidth > Math.abs(this.sizeList)) {
+      this.sizeList -= 300;
+      document.getElementById(this.pathObject.name)!.style.marginLeft = `${this.sizeList}px`;
+    }
+  }
+
+  moverRight() {
+    if ( 0 != Math.abs(this.sizeList)) {
+      this.sizeList += 300;
+      document.getElementById(this.pathObject.name)!.style.marginLeft = `${this.sizeList}px`;
+    }
   }
 
   ngOnChanges(): void {

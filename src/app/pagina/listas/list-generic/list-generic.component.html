@@ -1,7 +1,13 @@
 <div>
   <h2>{{pathObject?.name}}</h2>
   <div class="movieRowArea">
-    <div class="movieRow">
+    <div (click)="moverLeft()" class="area-seta-left">
+      <mat-icon class="seta-left">navigate_before</mat-icon>
+    </div>
+    <div (click)="moverRight()" class="area-seta-right">
+        <mat-icon class="seta-right">navigate_next</mat-icon>
+    </div>
+    <div class="movieRow" [id]="pathObject.name">
       <div class="movieItem" *ngFor="let item of movies">
         <img [src]="'http://image.tmdb.org/t/p/w300'+item.poster_path">
       </div>

@@ -23,5 +23,6 @@
 }
 
 .black {
-  background-color: #141414;
+  background-color: #141414e5;
+  transition: all ease 0.2s;
 }

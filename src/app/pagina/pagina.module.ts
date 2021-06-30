@@ -1,6 +1,7 @@
 import { ListGenericComponent } from './listas/list-generic/list-generic.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { DestaqueComponent } from './destaque/destaque.component';
@@ -20,7 +21,8 @@ import { PaginaComponent } from './pagina.component';
     ListGenericComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule
   ],
   exports: [
     PaginaComponent

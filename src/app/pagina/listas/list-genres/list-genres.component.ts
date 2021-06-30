@@ -11,6 +11,9 @@ export class ListGenresComponent implements OnInit {
   @Input() genre: any;
   movies: any[] = [];
 
+  sizeList: number = 0;
+  windowWidth: number = window.innerWidth;
+
   constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
@@ -18,6 +21,20 @@ export class ListGenresComponent implements OnInit {
 
   ngOnChanges(): void {
     this.getListMoviesByGenre();
+  }
+
+  moverLeft() {
+    if ((this.movies.length * 150) - this.windowWidth > Math.abs(this.sizeList)) {
+      this.sizeList -= 300;
+      document.getElementById(this.genre?.name)!.style.marginLeft = `${this.sizeList}px`;
+    }
+  }
+
+  moverRight() {
+    if ( 0 != Math.abs(this.sizeList)) {
+      this.sizeList += 300;
+      document.getElementById(this.genre?.name)!.style.marginLeft = `${this.sizeList}px`;
+    }
   }
 
   getListMoviesByGenre() {

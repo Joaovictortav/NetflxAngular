@@ -2,6 +2,43 @@
   width: 999999px !important;
 }
 
+.area-seta-left, .area-seta-right {
+  height: 225px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.movieRowArea:hover .area-seta-left {
+  opacity: 1;
+}
+
+.movieRowArea:hover .area-seta-right {
+  opacity: 1;
+}
+
+
+.area-seta-left {
+ left: 0;
+}
+
+.area-seta-right {
+  right: 0;
+}
+
+.seta-left, .seta-right {
+  font-size: 40px;
+  width: 40px;
+  color: #fff;
+}
+
 .movieItem {
   display: inline-block;
   width: 150px;
